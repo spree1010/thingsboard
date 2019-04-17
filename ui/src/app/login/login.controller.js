@@ -20,7 +20,7 @@ import logoSvg from '../../svg/logo_title_white.svg';
 /* eslint-enable import/no-unresolved, import/default */
 
 /*@ngInject*/
-export default function LoginController(toast, loginService, userService/*, $rootScope, $log, $translate*/) {
+export default function LoginController($log, toast, loginService, userService/*, $rootScope, $log, $translate*/) {
     var vm = this;
 
     vm.logoSvg = logoSvg;

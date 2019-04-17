@@ -14,21 +14,91 @@
  * limitations under the License.
  */
 @import "../../scss/constants";
+/* stylelint-disable */
+//  这个登录页面的背景颜色  添加的是背景图片
+md-content.login-page {
+  //background-color: #0074d9;
+  justify-content: flex-end;
+  overflow: hidden;
+  background: url("./image/login_b_g_img.jpg") center center no-repeat;
+  background-size: 100% 100%;
+}
 
+// 登录的 card 的背景颜色
 md-card.tb-login-card {
-  width: 330px !important;
-
+  width: 100% !important;
+  background-color: rgba(17, 20, 57, .82);
+  md-card-content {
+    margin-top: -50px;
+    padding: 0;
+  }
+  // card 的媒体查询
   @media (min-width: $layout-breakpoint-sm) {
-    width: 450px !important;
+    width: 470px !important;
   }
 
   md-card-title {
     img.tb-login-logo {
-      height: 50px;
+      display: block;
+      width: 185px;
+      height: 275px;
+      margin: 0 auto;
     }
   }
 
   md-card-content {
     margin-top: -50px;
+    padding: 75px;
   }
 }
+
+#login-card {
+  height: 100%;
+  margin: 0;
+  md-input-container{
+    position: relative;
+    margin: 7px 0 ;
+  }
+  md-input-container.md-tb-dark-theme {
+    .md-input {
+      height: 40px;
+      background-color: #19264b;
+      border: 1px solid #19264b;
+      color: rgba(255, 255, 255, 0.25);
+      padding-left: 10px;
+      border-radius: 3px;
+      &:focus {
+        border-bottom: 2px solid #19264b;
+      }
+    }
+
+    label {
+      font-size: 20px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+  }
+  md-card-title {
+    //flex-direction: column;
+    flex: 0 1 auto;
+  }
+  .md-raised {
+    // 按钮的颜色
+    background-color: #4474f6;
+    color: #ffffff;
+    margin: 0;
+  }
+  #login-reset-password{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    text-align: right;
+    right: 0;
+    top: -36px;
+    color: #5684ff;
+  }
+}
+
+// 在这个scss文件中突出stylelint 的规范
+/* stylelint-enable */
+
